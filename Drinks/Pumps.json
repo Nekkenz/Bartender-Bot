@@ -1,0 +1,57 @@
+[
+  {
+    "Pumps": [
+
+      {
+        "Name": "Vodka",
+        "Pump": 1
+      },
+      {
+        "Name": "Whiskey",
+        "Pump": 2
+      },
+      {
+        "Name": "Gin",
+        "Pump": 3
+      },
+      {
+        "Name": "Triple Sec",
+        "Pump": 4
+      },
+      {
+        "Name": "Tequila",
+        "Pump": 6
+      },
+      {
+        "Name": "Sprite",
+        "Pump": 7
+      },
+      {
+        "Name": "Other Crap",
+        "Pump": 8
+      },
+      {
+        "Name": "Coke",
+        "Pump": 9
+      },
+      {
+        "Name": "Lime",
+        "Pump": 10
+      },
+      {
+        "Name": "Alec's tears",
+        "Pump": 11
+      },
+      {
+        "Name": "Maxwell Special",
+        "Pump": 12
+      },
+      {
+        "Name": "Water",
+        "Pump": 0
+      }
+
+
+    ]
+  }
+]
