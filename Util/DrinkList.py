@@ -1,10 +1,12 @@
 import json
-
+import os
 ################################################
 # Import json files containing drinks in pumps #
 ################################################
 
-pumpsJSON = "Drinks/Pumps.json"
+dirname = os.path.dirname(__file__)
+drinksJSON = os.path.join(dirname, "../Drinks/Drinks.json")
+pumpsJSON = os.path.join(dirname, "../Drinks/Pumps.json")
 
 #################################################
 
@@ -17,8 +19,8 @@ def loadJSON(File):
 
 class DrinkList:
 	# Initialize the Drink list
-	def __init__(self, FilePath):
-		self.Data = loadJSON(FilePath)
+	def __init__(self):
+		self.Data = loadJSON(drinksJSON)
 		self.pumps = loadJSON(pumpsJSON)
 
 	# Returns a list of the names of the Drinks given in
@@ -47,7 +49,7 @@ class DrinkList:
 
 		# For debugging if you don't know what you are doing
 		#for i in ingreds:
-		#	print(ingreds[i])
+			#print(ingreds[i])
 	
 	# returns a list of touples containing the ingredients
 	# and their respective amount

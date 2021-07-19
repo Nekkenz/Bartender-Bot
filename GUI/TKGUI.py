@@ -3,15 +3,14 @@ from . import MainMenu as MM
 from tkinter import *
 
 
-def createApp(File):
+def createApp():
 	window = Tk()
-	app=TKgui(window, File)
+	app=TKgui(window)
 
 class TKgui:
 	# Initialize the Window for the Application
 	# with default fullscreen
-	def __init__(self, master, File):
-		self.FilePath = File
+	def __init__(self, master):
 		self.window = master
 		self.frame=Frame(self.window)
 		self.frame.pack(expand=True, fill=BOTH)
@@ -25,7 +24,7 @@ class TKgui:
 		self.window.attributes("-fullscreen", True)
 
 		## Set up menu bar and main menu
-		self.mainFrame = MM.MainMenu(self.canvas, self.window, self.FilePath)
+		self.mainFrame = MM.MainMenu(self.canvas, self.window)
 		Nav.Navbar(self.window, self.mainFrame)
 
 		## Bind keys to functionality

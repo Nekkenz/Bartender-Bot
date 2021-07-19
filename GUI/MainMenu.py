@@ -12,12 +12,11 @@ def createDrinks(File):
 
 class MainMenu:
 	# Define settings upon initialization. Here you can specify
-	def __init__(self, Frame, Window, File):
+	def __init__(self, Frame, Window):
 		self.master = Window
 		self.canvas = Frame
-		self.file = File
 		self.format = FH.FormatHandler()
-		self.drinkList = DL.DrinkList(self.file)
+		self.drinkList = DL.DrinkList()
 		self.pixel = PhotoImage(width=1, height=1)
 		self.drinkPumps = PH.PumpsHandler()
 		self.startUp()
@@ -170,7 +169,7 @@ class MainMenu:
 		self.format.clearCanvas(self.canvas)
 		data = []
 		dirname = os.path.dirname(__file__)
-		filename = os.path.join(dir, '../README.txt')
+		filename = os.path.join(dirname, '../README.txt')
 		with open (filename, 'r') as myfile:
 			data=myfile.readlines()
 
